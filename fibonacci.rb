@@ -24,4 +24,4 @@ fib_array.each { |num| x +=1
     puts "#{x}.  " + "#{num}".rjust(5 - x.to_s.length) }
     
 puts ""
-puts 'Thanks, goodbye!'
+puts 'Thanks for using the Fibonacci Sequence Generator, goodbye!'
