@@ -47,7 +47,7 @@ def morsecode string
     
     if string[x] != " "
       morse_string += morse[string[x].downcase.to_sym].to_s + " "
-    elsif 
+    else 
       morse_string += " / "
     end
     x +=1
