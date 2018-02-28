@@ -74,11 +74,13 @@ while true
     puts""
     puts "Total Calorie Count: #{$calorie_count}."
     puts ""
-  
+    
   when 'X'
-    "Goodbye, my friend! Ci vediamo!"
+    puts "Goodbye, my friend! Ci vediamo!"
     break
     
+  else
+    puts "That is not a valid command!"
   end
 
     
