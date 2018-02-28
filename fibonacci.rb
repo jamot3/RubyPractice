@@ -14,7 +14,7 @@ puts ""
 puts ""
 puts "Fibonacci Sequence Generator"
 puts "----------------------------"
-print "How many Fibonacci numbers would like to view? :"
+print "How many Fibonacci numbers would like to view? : "
 n = gets.chomp.to_i
 
 fib_array = fibonacci(n)
