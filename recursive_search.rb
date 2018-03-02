@@ -28,10 +28,11 @@ def rec_search array, element
 end
 
 
-### As it stands, this code is completely unoptimized. It takes FOREVER to search for an element. 
+### As it stands, it feels like this code is completely terrible. It takes FOREVER to search for an element. 
 ### I ran it 10,000 times on an array consisting of 223 elements, and it took .251794 seconds to compute. 
 ### Compare this to the simple, non-recursive 'while' loop code below, which completes 10,000 iterations of
-### the same code in .015628 seconds. I believe I can beat the while loop using recursion, I just have to figure out how. 
+### the same code in .015628 seconds. I do not believe I can beat the 'while' loop w recursion in this instance,
+### but it's good practice. 
 
 def search array, element
     x = 0 
