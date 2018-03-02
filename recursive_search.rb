@@ -28,6 +28,20 @@ def rec_search array, element
 end
 
 
-puts rec_search ["Aardvark", "Duck", "Deer", "Falcon"], "Falcon" ### == true
-puts rec_search ["Aardvark", "Duck", "Deer", "Falcon"], "Ocelot" ### == false
-puts rec_search ["Potato", "Tomato", "Carrot", "Grape", "Cherry"], "Carrot" ### == true
+### As it stands, this code is completely unoptimized. It takes FOREVER to search for an element. 
+### I ran it 10,000 times on an array consisting of 223 elements, and it took .251794 seconds to compute. 
+### Compare this to the simple, non-recursive 'while' loop code below, which completes 10,000 iterations of
+### the same code in .015628 seconds. I believe I can beat the while loop using recursion, I just have to figure out how. 
+
+def search array, element
+    x = 0 
+    while x < array.length
+        
+        if array[x] == element
+            return true
+        end
+        x+=1
+    end
+    
+    false
+end
