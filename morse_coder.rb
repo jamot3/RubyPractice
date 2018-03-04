@@ -1,4 +1,5 @@
-### Morsecode translator -- places a space between letters of the same word, and a " / " between words. 
+### Morsecode translator -- places a space between letters of the same word, and a " / " between words.
+### Does not yet accept symbols (!, #, %, +, /, -, &, etc.)
 
 def morsecode string
   morse = Hash.new
@@ -45,11 +46,14 @@ def morsecode string
   
   while x < string.length
     
-    if string[x] != " "
+    if string[x] != " " && string[x].to_i.to_s != string[x]
       morse_string += morse[string[x].downcase.to_sym].to_s + " "
-    else 
+    elsif string[x].to_i.to_s == string[x] 
+      morse_string += morse[string[x].to_i] + " "
+    else
       morse_string += " / "
     end
+    
     x +=1
   end
    
