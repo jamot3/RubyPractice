@@ -19,16 +19,12 @@ class String
         if sentence_array.length <= 0 
             return character_count
         end
-        ### Below, we take a letter off the end of the array, (current_letter), and count
-        ### how many times it appears. Letters not equal to current_letter are moved to
-        ### new_array. When counting is finished, current_letter alongside its count
-        ### are added to the character_count array. The new_array of yet uncounted letters
-        ### is renamed sentence_array, and the whole process repeats recursively until 
-        ### there are no letters left to count. 
+       
         current_letter = sentence_array.pop
         new_array = []
         counter = 1
-
+        ### Compares each letter of the array to current_letter, incrementing a counter if they're the same.
+        ### If they aren't the same, the uncounted letter is assigned to new_array. 
         sentence_array.each do |letter|
             if letter == current_letter 
                 counter+=1
@@ -36,7 +32,9 @@ class String
                 new_array.push(letter)
             end
         end
-    
+        ### The current_letter, and its respective counter, are added to the character_count array. 
+        ### Sentence_array is re-defined as new_array, consisting only of uncounted letters, and 
+        ### then the function calls itself, counting until completion.
         character_count.push("#{current_letter}: #{counter}")
         sentence_array = new_array
         count_em_up sentence_array, character_count
