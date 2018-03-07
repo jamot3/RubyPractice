@@ -1,5 +1,9 @@
-nil
-nil
+
+
+
+### This is the first real practice program I created when I started learning ruby. I created this in mid-January, 2018. It is very sloppy,and
+### a few variables are broken as it stands, but I figured I'd upload it as a testament to my progression as a programmer. 
+
 playercashstart = 20.00
 playercash = 20.00
 
