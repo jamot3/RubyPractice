@@ -24,4 +24,4 @@ def add_them_up array, flat_array
      
 end
 
-print add_nested([4, [[2], [1]], [3]])
+puts add_nested([4, [[2], [1]], [3]]) == 10  ### Output = True 
