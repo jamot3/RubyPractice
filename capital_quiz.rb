@@ -109,7 +109,7 @@ states = [ "Alaska",
     "West Virginia", 
     "Wyoming"]
     
-correct_questions = 0
+
 puts "~~~~~~~~~~~~~~~~~~~~~~~"
 puts "~~~U.S. Capital Quiz~~~"
 puts "~~~~~~~~~~~~~~~~~~~~~~~"
@@ -118,6 +118,8 @@ puts "Welcome! How long would you like your quiz to be?"
 puts ""
 puts "Please enter the number of questions you would like in your quiz:"
 
+
+### User defines number of questions in quiz.
 quiz_length = gets.chomp.to_i
 while quiz_length > 50 || quiz_length < 1
     puts "Your quiz length must be longer than one question and no longer than fifty questions!"
@@ -125,21 +127,26 @@ while quiz_length > 50 || quiz_length < 1
     puts quiz_length = gets.chomp.to_i
 end
 
+
 puts ""
 puts "Wonderful! Your quiz will begin as soon as you press enter..."
-input = gets
+input = gets ### Blank input used as a 'press enter to continue'...
 puts ""
 puts ""
 
-questions_asked = 1
 
-### I initially used rand(states.length) to randomize questions. This worked, but risked repeating
+
+### I initially used rand(states.length) to randomize questions. This worked, but it risked repeating
 ### questions because it just returns randomized numbers between 0 and 49.
-### By creating a shuffled array the length of the states array, and then using .pop to select 
-### the index number off the end of the shuffled array, we ensure that no two questions are 
+### By creating a shuffled array the length of the "states" array, and then using .pop to select 
+### the a number off the end of the shuffled array, we ensure that no two questions are 
 ### repeated in a single quiz instance. 
  
 rand_index = (0..49).to_a.shuffle
+correct_questions = 0
+questions_asked = 1
+
+
 
 while questions_asked <= quiz_length
     
