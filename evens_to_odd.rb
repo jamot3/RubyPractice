@@ -55,3 +55,7 @@ puts array.map { |num|
     end }.join(",")
 
 ### output== 1,3,5,7,7,9,11
+### Below are the respective times of each function to process the same 7 element array 10,000 times.
+Time : 51.95899959653616 milliseconds   [Recursive function]
+Time : 38.18199969828129 milliseconds   ['while' loop]
+Time : 42.603000067174435 milliseconds  [.map]
