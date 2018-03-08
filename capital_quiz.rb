@@ -41,7 +41,7 @@ def capital_hash
 	"North Carolina" => "Raleigh",
 	"North Dakota" => "Bismarck",
 	"Ohio" => "Columbus",
-	"Oklahoma" => "Oklahoma",
+	"Oklahoma" => "Oklahoma City",
 	"Oregon" => "Salem",
 	"Pennsylvania" => "Harrisburg",
 	"Rhode Island" => "Providence",
