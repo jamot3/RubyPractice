@@ -1,5 +1,6 @@
 ### This method takes in an array and an element. If the array contains the element, it will return 'true', 
-### otherwise it will return 'false'.
+### otherwise it will return 'false'. I know it's not really a 'search', so much as an element 'verification'
+### function, but 'search' sounds a bit snappier. 
 
 def rec_search array, element
     
