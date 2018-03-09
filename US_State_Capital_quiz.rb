@@ -120,11 +120,15 @@ puts "Please enter the number of questions you would like in your quiz:"
 
 
 ### User defines number of questions in quiz.
-quiz_length = gets.chomp.to_i
-while quiz_length > 50 || quiz_length < 1
-    puts "Your quiz length must be longer than one question and no longer than fifty questions!"
-    puts "Please enter a valid length for your quiz:"
-    puts quiz_length = gets.chomp.to_i
+
+while true 
+    print "Please enter the number of questions you would like in your quiz: "
+    quiz_length = gets.chomp.to_i
+    if quiz_length > 50 || quiz_length < 1
+        puts "Your quiz must be longer than one question and shorter than fifty questions!"
+    else
+        break
+    end
 end
 
 
@@ -165,11 +169,11 @@ while questions_asked <= quiz_length
         puts""
     end
     
-    puts "You have gotten #{correct_questions}/#{quiz_length} correct."
+    puts "You have gotten #{correct_questions}/#{quiz_length} questions correct."
     puts ""
     puts ""
     questions_asked+=1
 end
 
-puts "You're all done! Your final score is #{correct_questions}/#{quiz_length}, #{correct_questions/quiz_length.to_f.round*100}%"
+puts "You're all done! Your final score is #{correct_questions}/#{quiz_length}, #{((correct_questions/quiz_length.to_f)*100).round}%"
     
