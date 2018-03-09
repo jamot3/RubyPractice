@@ -1,5 +1,4 @@
-### Alternate code for the body of the program featured at bottom - more compact and less repetitive code-wise, but not
-### as nice for the user or as visually appealing. 
+### Alternate code for the body of the program featured at bottom.
 
 module Circle
     include Math
