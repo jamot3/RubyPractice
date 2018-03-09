@@ -1,3 +1,6 @@
+### Alternate code for the body of the program featured at bottom - more compact and less repetitive code-wise, but not
+### as nice for the user or as visually appealing. 
+
 module Circle
     include Math
     
@@ -84,4 +87,37 @@ while true
     end
     
 end
+
+#while true
+#    puts "Please enter the radius if your Circle:"
+#    radius = gets.chomp.to_i
+#    puts ""
+#    puts ""
+#
+#   puts "What would you like to calculate?"
+#   puts "- To calculate diameter, type 'D' ..."
+#   puts "- To calculate circumference, type 'C' ..."
+#   puts "- To calculate area, type 'A' ..."
+#   puts "- To exit the program, type 'X' ... "
+#   puts "" 
+#   choice = gets.chomp.upcase
+#   
+#   if choice == 'D'
+#       operation = 'diameter'
+#       answer = Circle.diameter(radius)
+#   elsif choice == 'C'
+#       operation = 'circumference'
+#       answer = Circle.circumference(radius)
+#   elsif choice == 'A'
+#       operation = 'area'
+#       answer = Circle.circumference(radius)
+#   elsif choice == 'X'
+#       break
+#   end
+#   
+#   puts "The #{operation} of your circle is #{answer}."
+#   puts ""
+#   puts ""
+#   
+#end
     
