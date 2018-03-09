@@ -1,3 +1,9 @@
+### This program allows you to create, save, and load 'to-do' lists. Files are saved in the to_do_list.rb's local directory
+### with the extension '.txt' and can be reloaded by typing the ENTIRE filename including extension (e.g. 'groceries.txt') when
+### prompted for file name at load. I am currently trying to figure out how to return an error when the user types in an incorrect
+### or non-existent filename -- currently, the program crashes if that occurs. 
+
+
 to_do = Hash.new 
 
 def save object, filename
