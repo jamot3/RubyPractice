@@ -21,8 +21,8 @@ end
 ### Okay, the above code is as 'optimized' a recursive search function as I am capable of, at the moment.
 ### Searching an array with a length of 224 elements 10,000 times, the above method took .093 seconds.
 ### The below method performs the same 10,000 repetitions in just .016 seconds. However, before I realized I could
-### utilize the 'slice' method  for this function (thanks to scouring innumerable blog posts related to Ruby & recursion)
-### the above recursive method clocked in at a whopping .28 seconds. One step at a time. 
+### utilize the 'slice' method  for this function, it took over .28 seconds to do the same calculations. That version
+### is featured at the bottom of this code. 
 
 
 
