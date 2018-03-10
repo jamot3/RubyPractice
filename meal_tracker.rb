@@ -1,4 +1,5 @@
-### A simple looping command line based utility that allows you to create a list of daily meals along with calorie counts and daily total caloric intake. 
+### A simple looping command line based utility that allows you to create a list of daily meals along with 
+### calorie counts and daily total caloric intake. 
 
 
 class Food
@@ -41,10 +42,12 @@ while true
   when 'N'
     puts ""
     name = ""
+    
     while name.length < 1
       print "Type the name of the meal:  "
       name  = gets.chomp.capitalize
     end
+    
     print "Type the caloric content of the meal:  "
     calories = gets.chomp.to_i
     puts "Added to your meal log: #{name} (#{calories} calories)."
@@ -57,6 +60,7 @@ while true
     puts ""
     print "Type the name of the meal you want to delete:"
     food = gets.chomp.capitalize.to_sym
+    
     if $food_list[food].nil?
       puts "This food does not exist in your meal log."
     else
