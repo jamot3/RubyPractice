@@ -24,4 +24,3 @@ def sw digits
     return sw
 end
 
-puts sw(10)
