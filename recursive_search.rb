@@ -18,12 +18,10 @@ def rec_search array, element
 end
 
 
-### Okay, the above code is as 'optimized' a recursive search function as I am capable of, at the moment.
-### Searching an array with a length of 224 elements 10,000 times, the above method took .093 seconds.
-### The below method performs the same 10,000 repetitions in just .016 seconds. However, before I realized I could
-### utilize the 'slice' method  for this function, it took over .28 seconds to do the same calculations. That version
-### is featured at the bottom of this code. 
-
+### Okay, the above code is as 'optimized' a recursive search function as I am capable of, at the moment. Searching an array
+### of 224 elements 100,000 times, the above function clocked averaged .2098 seconds processing time. By comparison, calling 
+### Ruby's include? method searching for the same element 100k times took .306 seconds. The below function was the worst 
+### performing search function, taking a whopping .996 seconds to perform the same task. 
 
 
 def search array, element
