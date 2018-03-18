@@ -5,14 +5,13 @@
 ### convoluted, however, it's what I immediately came up with and I'll come up with a better
 ### solution soon. 
 ###
-### Basically, my approach was to search for each pair that adds to 10. If found, slice out to
-### test if it 3 question marks between the numbers.
-### If anypair doesn't the method returns false. If the pairs do, I used a variable named 'success'
-### to indicate that we had a successful instance. At the end, if we had no successes, the 
-### method returns false. If we had a success, it returns true. 
-    
-end
-
+### Basically, my approach was to search for each pair that adds to 10. If a pair is found, the method
+### slices out a new string, starting from the first num and ending with the last num, and tests to see 
+### if there are three question marks between the two nums. If a pair fails to meet the 3 q.mark condition,
+### the method immediately returns 'false'. Otherwise, we iterate +1 on our 'success' counter for each
+### successful instance. At the end of our method, if we had any 'successes', our method returns 'true.'
+### otherwise, it means that we didn't have any instances of numbers summing to 10, questions marks or not,
+### so our method returns 'false'. 
 
 def questionsmarks str
     string = str.split("")
@@ -20,14 +19,14 @@ def questionsmarks str
     success = 0
     
     while x < string.length
-        y = x + 1
+        y = 0
         current_char = string[x]
         
         while y < string.length
             other_char = string[y]
             
-            if (current_char.to_i + other_char.to_i) == 10 
-                new_string = string.slice(x, y-x+1)
+            if (y>x) && (current_char.to_i + other_char.to_i) == 10
+                new_string = string.slice(x, y-x)
                 z = 0 
                 counter = 0 
                 while z < new_string.length
