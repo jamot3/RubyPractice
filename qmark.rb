@@ -1,9 +1,9 @@
 ### This is my initial answer to a coderbyte challenge that asks us to return 'true' if 
 ### there are 3 question marks found in between every pair of numbers that sums to 10 within
 ### a given string - and returns 'false' if there aren't 3 qmarks between a pair of numbers
-### that sums to 10 and if there are no numbers that sum to 10. I know this solution is rather
-### convoluted, however, it's what I immediately came up with and I'll come up with a better
-### solution soon. 
+### that sums to 10. A very lengthy and convoluted solution, for sure, but it works. However, 
+### I am going to try to find a more concise solution. This is crazy long, I bet I can figure
+### it out in <20 lines of code, maybe 15. 
 ###
 ### Basically, my approach was to search for each pair that adds to 10. If a pair is found, the method
 ### slices out a new string, starting from the first num and ending with the last num, and tests to see 
